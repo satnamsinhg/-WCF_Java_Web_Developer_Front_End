@@ -1,0 +1,18 @@
+<div class="container-fluid mb-5">
+  <form  #clientForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <!-- {{clientForm.value | json}} -->
+    <h1 class="display-3">Register Client</h1>
+    <div class="form-group">
+      <label for="clientName">Client Name</label>
+      <input class="form-control" #name="ngModel" [class.is-invalid]="name.invalid && name.touched"
+      [(ngModel)]="clientName" required minlength="4" maxlength="20"
+      type="text" name="clientName" id="clientName">
+      <div *ngIf="name.invalid && name.touched">
+        <small *ngIf="name.errors.required" class="text-danger">Client Name is Required</small>
+        <small *ngIf="name.errors.minlength || name.errors.maxlength" class="text-danger">Client Name must be between 4 to 20 characters long</small>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

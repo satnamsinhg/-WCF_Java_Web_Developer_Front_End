@@ -1,0 +1,14 @@
+nav
+{
+  z-index: 2;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+.navbar-brand{
+  width: auto;
+  float: none;
+  display: inline-block;
+  margin: 0 auto;
+}
+

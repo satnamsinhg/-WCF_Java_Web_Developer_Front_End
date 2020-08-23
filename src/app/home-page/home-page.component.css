@@ -1,0 +1,15 @@
+.introduction{
+  float: none;
+  padding-top: 10%;
+  width: 100%;
+  text-align: center;
+  color: steelblue;
+}
+
+h3
+{
+
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+}
