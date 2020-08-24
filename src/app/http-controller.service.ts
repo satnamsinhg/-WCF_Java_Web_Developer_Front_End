@@ -30,6 +30,12 @@ export class HttpControllerService {
       .pipe(catchError(this.handleError));
   }
 
+  findFeaturesSize(clientName: string):Observable<number> {
+    return this.http.get<number>(this.url + "/features/clients/size/" + clientName)
+      .pipe(catchError(this.handleError));
+
+  }
+
 
   handleError(error) {
     let errorMessage = '';

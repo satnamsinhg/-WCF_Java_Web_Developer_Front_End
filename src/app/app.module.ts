@@ -13,10 +13,6 @@ import { FeatureSuccessComponent } from './feature-success/feature-success.compo
 import { ClientCreatedComponent } from './client-created/client-created.component';
 import { FindFeaturesComponent } from './find-features/find-features.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-
 
 @NgModule({
   declarations: [
@@ -27,7 +23,7 @@ import { MatSortModule } from '@angular/material/sort';
     PageNotFoundComponent,
     FeatureSuccessComponent,
     ClientCreatedComponent,
-    FindFeaturesComponent
+    FindFeaturesComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,12 +31,9 @@ import { MatSortModule } from '@angular/material/sort';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

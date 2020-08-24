@@ -26,7 +26,6 @@ export class FindFeaturesComponent {
     this.http.findFeatures(this.clientName).subscribe(
       (data) => {
         this.featureData = data;
-        console.log(data);
         this.showTable = true;
         this.exception = false;
 

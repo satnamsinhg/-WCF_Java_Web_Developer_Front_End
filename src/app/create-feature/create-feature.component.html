@@ -2,9 +2,7 @@
   <form [formGroup]="featureForm" (ngSubmit)="onSubmit()">
   <h1 class="display-3">Add Feature</h1>
   <hr>
-
-  <!-- {{featureForm.value| json}} -->
-  <h6 class="text-danger">{{errorMsg}}</h6>
+  <div *ngIf="exception" class="alert alert-danger">{{errorMsg}}</div>
   <div class="form-group">
       <label for="title">Feature Title</label>
     <input type="text" class="form-control" formControlName="fTitle"
@@ -13,30 +11,35 @@
   <div class="form-group">
       <label for="description">Description</label>
     <input type="text" class="form-control" placeholder="Description" formControlName="fDescription"
-    name="fDescription" id="description">
+    name="fDescription" id="description" required>
   </div>
   <div formGroupName="fClient">
       <div class="form-group">
         <label for="client">Client</label>
-        <input type="text" id="client" class="form-control" formControlName="clientName"
-        placeholder="client" name="fClient">
+        <input #clientName (blur)="clientNameEntered(clientName.value)" type="text" id="client" class="form-control" formControlName="clientName"
+        placeholder="Client Name" name="fClient" >
     </div>
   </div>
 
   <div class="form-group">
     <label for="clientPriority">Client Priority</label>
-    <input type="text" class="form-control" placeholder="clientPriority" formControlName="fClientPriority"
-    name="fClientPriority" id="clientPriority">
+    <select class="form-control" name="fClientPriority"
+    formControlName="fClientPriority" id="clientPriority">
+    <option selected disabled >Select me</option>
+    <option *ngFor="let val of priorities" value={{val}}>{{val}}</option>
+  </select>
   </div>
+
+
   <div class="form-group">
     <label for="targetDate">Target Date</label>
     <input type="date" class="form-control" formControlName="fTargetDate"
-     placeholder="Target Date" id="targetDate" name="fTargetDate">
+     placeholder="Target Date" id="targetDate" name="fTargetDate" >
   </div>
   <div class="form-group">
     <label for="productArea">Product Area</label>
     <select class="form-control" name="fProductArea"
-    formControlName="fProductArea">
+    formControlName="fProductArea" placeholder="Product Area">
       <option selected disabled>Select Product Area</option>
       <option value="POLICIES">Policies</option>
       <option value="BILLING">Billing</option>

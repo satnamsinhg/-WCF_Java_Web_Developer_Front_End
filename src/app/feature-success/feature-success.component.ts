@@ -14,6 +14,6 @@ export class FeatureSuccessComponent implements OnInit {
   ngOnInit(): void {
     let id = this.activatedRoute.snapshot.paramMap.get('fId');
 
-    this.SuccessMsg = "Feature is registered with : " +id;
+    this.SuccessMsg = "Feature is registered with id : " +id;
   }
 }
