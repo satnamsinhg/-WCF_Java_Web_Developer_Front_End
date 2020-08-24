@@ -1,3 +1,4 @@
+import { FindClientsComponent } from './find-clients/find-clients.component';
 import { FindFeaturesComponent } from './find-features/find-features.component';
 import { ClientCreatedComponent } from './client-created/client-created.component';
 import { CreateClientComponent } from './create-client/create-client.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'feature/:fId', component: FeatureSuccessComponent },
   { path: 'client/:clientId', component: ClientCreatedComponent },
   { path: 'findFeatures', component: FindFeaturesComponent },
+  { path: 'findClients', component: FindClientsComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

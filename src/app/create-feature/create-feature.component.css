@@ -4,7 +4,11 @@ form{
   width: 50%;
 }
 .display-3{
-  margin-top: 10%;
   font-size: 48px;
   text-align: center;
+  padding-bottom: 3%;
+  background: -webkit-linear-gradient(#fff, rgb(133, 58, 58));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }

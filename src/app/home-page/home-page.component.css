@@ -1,15 +1,19 @@
 .introduction{
   float: none;
   padding-top: 10%;
-  width: 100%;
+  width: 40%;
   text-align: center;
   color: steelblue;
+  margin: auto;
 }
-
+h4{
+  font-size: 24px ;
+}
 h3
 {
-
   width: 100%;
-  position: absolute;
-  bottom: 10%;
+  margin-top: 20%;
+}
+.active{
+  background-color: steelblue;
 }

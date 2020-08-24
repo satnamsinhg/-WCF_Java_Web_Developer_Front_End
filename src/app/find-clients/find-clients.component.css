@@ -1,16 +1,19 @@
-form{
-  margin: auto;
-  padding: 10px;
-  width: 500px;
+.heading{
+  padding-top: 3%;
+  width: 100%;
+  align-content: center;
 }
-.display-3{
 
-  font-size: 60px;
+.display-3{
+  font-size: 48px;
   text-align: center;
-  padding-bottom: 4%;
   background: -webkit-linear-gradient(#fff, rgb(133, 58, 58));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
 
-
+.tableboot{
+  width: 40%;
+  padding-top: 3%;
+  margin: auto;
 }

@@ -1,7 +1,6 @@
 <div class="container-fluid mb-5">
   <form [formGroup]="featureForm" (ngSubmit)="onSubmit()">
   <h1 class="display-3">Add Feature</h1>
-  <hr>
   <div *ngIf="exception" class="alert alert-danger">{{errorMsg}}</div>
   <div class="form-group">
       <label for="title">Feature Title</label>

@@ -21,8 +21,6 @@ export class FindFeaturesComponent {
   exception: boolean;
 
   onSubmit() {
-    console.log(this.clientName);
-
     this.http.findFeatures(this.clientName).subscribe(
       (data) => {
         this.featureData = data;

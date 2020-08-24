@@ -13,6 +13,7 @@ import { FeatureSuccessComponent } from './feature-success/feature-success.compo
 import { ClientCreatedComponent } from './client-created/client-created.component';
 import { FindFeaturesComponent } from './find-features/find-features.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FindClientsComponent } from './find-clients/find-clients.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FeatureSuccessComponent,
     ClientCreatedComponent,
     FindFeaturesComponent,
+    FindClientsComponent,
   ],
   imports: [
     BrowserModule,

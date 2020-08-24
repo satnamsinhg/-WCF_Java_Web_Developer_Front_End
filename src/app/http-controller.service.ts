@@ -33,9 +33,12 @@ export class HttpControllerService {
   findFeaturesSize(clientName: string):Observable<number> {
     return this.http.get<number>(this.url + "/features/clients/size/" + clientName)
       .pipe(catchError(this.handleError));
-
   }
 
+  getClientsList():Observable<Client[]> {
+    return this.http.get<Client[]>(this.url + "/clients")
+      .pipe(catchError(this.handleError));
+  }
 
   handleError(error) {
     let errorMessage = '';
@@ -44,7 +47,6 @@ export class HttpControllerService {
     } else {
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.error.message}`;
     }
-    // return Observable.throw(errorMessage)
     return throwError(errorMessage);
   }
 }
